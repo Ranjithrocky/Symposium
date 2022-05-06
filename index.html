@@ -3345,11 +3345,129 @@
             --e-global-typography-accent-font-weight: 500;
         }
 
+        :root {
+            --background-dark: #2d3548;
+            --text-light: rgba(255, 255, 255, 0.6);
+            --text-lighter: rgba(255, 255, 255, 0.9);
+            --spacing-s: 8px;
+            --spacing-m: 16px;
+            --spacing-l: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 64px;
+            --width-container: 1200px;
+        }
+
+        * {
+            border: 0;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 14px;
+        }
+
+        body {
+            height: 100%;
+        }
+
+        .hero-section {
+            align-items: flex-start;
+            background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+            display: flex;
+            min-height: 100%;
+            justify-content: center;
+            padding: var(--spacing-xxl) var(--spacing-l);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: var(--spacing-l);
+            grid-row-gap: var(--spacing-l);
+            max-width: var(--width-container);
+            width: 100%;
+        }
+
+        @media(min-width: 540px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(min-width: 960px) {
+            .card-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card {
+            list-style: none;
+            position: relative;
+        }
+
+        .card:before {
+            content: '';
+            display: block;
+            padding-bottom: 150%;
+            width: 100%;
+        }
+
+        .card__background {
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--spacing-l);
+            bottom: 0;
+            filter: brightness(0.75) saturate(1.2) contrast(0.85);
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform-origin: center;
+            transform: scale(1) translateZ(0);
+            transition:
+                filter 200ms linear,
+                transform 200ms linear;
+        }
+
+        .card:hover .card__background {
+            transform: scale(1.05) translateZ(0);
+        }
+
+        .card-grid:hover>.card:not(:hover) .card__background {
+            filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+        }
+
+        .card__content {
+            left: 0;
+            padding: var(--spacing-l);
+            position: absolute;
+            top: 0;
+        }
+
+        .card__category {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-s);
+            text-transform: uppercase;
+        }
+
+        .card__heading {
+            color: var(--text-lighter);
+            font-size: 2.0rem;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+            line-height: 1.4;
+            word-spacing: 100vw;
+        }
+
         .elementor-section.elementor-section-boxed>.elementor-container {
             max-width: 1240px;
         }
 
-            
+
 
         h1.entry-title {
             display: var(--page-title-display);
@@ -3587,8 +3705,8 @@
         }
     </style>
     <link rel='stylesheet' id='font-awesome-css'
-        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'
-        type='text/css' media='all' />
+        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' type='text/css'
+        media='all' />
     <style id='font-awesome-inline-css' type='text/css'>
         [data-font="FontAwesome"]:before {
             font-family: 'FontAwesome' !important;
@@ -3602,6 +3720,10 @@
             -moz-osx-font-smoothing: grayscale !important;
         }
     </style>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel='stylesheet' id='bootstrap-css'
         href='https://radiustheme.com/demo/wordpress/eventalk/wp-content/themes/eventalk/assets/css/bootstrap.min.css'
         type='text/css' media='all' />
@@ -3679,6 +3801,110 @@
         #tophead .tophead-contact .fa,
         #tophead .tophead-address .fa {
             color: #4c1864;
+        }
+
+        :root {
+            --background-dark: #2d3548;
+            --text-light: rgba(255, 255, 255, 0.6);
+            --text-lighter: rgba(255, 255, 255, 0.9);
+            --spacing-s: 8px;
+            --spacing-m: 16px;
+            --spacing-l: 24px;
+            --spacing-xl: 32px;
+            --spacing-xxl: 64px;
+            --width-container: 1200px;
+        }
+
+
+
+
+        .hero-section {
+            align-items: flex-start;
+            background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+            display: flex;
+            min-height: 100%;
+            justify-content: center;
+            padding: var(--spacing-xxl) var(--spacing-l);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            grid-column-gap: var(--spacing-l);
+            grid-row-gap: var(--spacing-l);
+            max-width: var(--width-container);
+            width: 100%;
+        }
+
+        @media(min-width: 540px) {
+            .card-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media(min-width: 960px) {
+            .card-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .card {
+            list-style: none;
+            position: relative;
+        }
+
+        .card:before {
+            content: '';
+            display: block;
+            padding-bottom: 150%;
+            width: 100%;
+        }
+
+        .card__background {
+            background-size: cover;
+            background-position: center;
+            border-radius: var(--spacing-l);
+            bottom: 0;
+            filter: brightness(0.75) saturate(1.2) contrast(0.85);
+            left: 0;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform-origin: center;
+            transform: scale(1) translateZ(0);
+            transition:
+                filter 200ms linear,
+                transform 200ms linear;
+        }
+
+        .card:hover .card__background {
+            transform: scale(1.05) translateZ(0);
+        }
+
+        .card-grid:hover>.card:not(:hover) .card__background {
+            filter: brightness(0.5) saturate(0) contrast(1.2) blur(20px);
+        }
+
+        .card__content {
+            left: 0;
+            padding: var(--spacing-l);
+            position: absolute;
+            top: 0;
+        }
+
+        .card__category {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            margin-bottom: var(--spacing-s);
+            text-transform: uppercase;
+        }
+
+        .card__heading {
+            color: var(--text-lighter);
+            font-size: 1.9rem;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
+            line-height: 1.4;
+            word-spacing: 100vw;
         }
 
         #tophead,
@@ -4486,21 +4712,16 @@
             background-color: #4c1864;
         }
 
-        .speaker-layout3:before {
-            background: rgba(76, 24, 100, 0.8);
-        }
-
-        .speaker-layout3 .item-social ul li a {
-            color: #fad03b;
-        }
-
-        .speaker-layout1 .item-img:before {
-            background: rgba(250, 208, 59, 0.9);
-        }
-
-        .speaker-layout2 .item-social ul li a:hover {
-            color: #fad03b;
-        }
+        .change {
+	  display: none;
+	}		
+	.list:hover  .change {
+	  display: block;
+	  color: blue;
+	  font-size: 20px;
+    }
+    
+  
 
         .title-light.hover-yellow a:hover,
         .title-regular.hover-yellow a:hover,
@@ -4691,42 +4912,7 @@
             background-color: #fad03b;
         }
 
-        .skew {
-            background: rgba(76, 24, 100, 0.7);
-        }
-
-        .skew_2 {
-            background: rgba(76, 24, 100, 0.6);
-        }
-
-        .skew_3 {
-            background: rgba(76, 24, 100, 0.5);
-        }
-
-        .price-table-layout3 .tpt-col-inner:hover {
-            background: #4c1864;
-        }
-
-        .price-table-layout2:after {
-            background: #fad03b;
-        }
-
-        .price-table-layout2 .tpt-header .tpt-header-top .tpt-title:before {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout2 .tpt-header .tpt-header-top .tpt-title:after {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout3 .tpt-footer .tpt-footer-btn {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout3 .tpt-col-inner:hover .tpt-header .tpt-header-top {
-            border-bottom: 1px solid #fad03b;
-        }
-
+        
     </style>
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css?family=Poppins:600,500,700%7CRoboto:400&#038;display=swap&#038;ver=1624437890" />
@@ -4746,8 +4932,8 @@
             loadAsync('https://radiustheme.com/demo/wordpress/eventalk/wp-content/cache/wpo-minify/1651380615/assets/wpo-minify-header-44290d20.min.js', null);
         }</script>
     <meta name="generator"
-        content="Powered by LayerSlider 7.1.3 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress." 
-    <link rel="https://api.w.org/" href="https://radiustheme.com/demo/wordpress/eventalk/wp-json/" />
+        content="Powered by LayerSlider 7.1.3 - Multi-Purpose, Responsive, Parallax, Mobile-Friendly Slider Plugin for WordPress."
+        <link rel="https://api.w.org/" href="https://radiustheme.com/demo/wordpress/eventalk/wp-json/" />
     <link rel="alternate" type="application/json"
         href="https://radiustheme.com/demo/wordpress/eventalk/wp-json/wp/v2/pages/1247" />
     <link rel="EditURI" type="application/rsd+xml" title="RSD"
@@ -4763,9 +4949,8 @@
     <link rel="alternate" type="text/xml+oembed"
         href="https://radiustheme.com/demo/wordpress/eventalk/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fradiustheme.com%2Fdemo%2Fwordpress%2Feventalk%2F&#038;format=xml" />
     <meta name="generator" content="Redux 4.3.12" />
-    <link rel='preload'
-        href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css'
-        as='font' type='font/woff2' crossorigin />
+    <link rel='preload' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css' as='font'
+        type='font/woff2' crossorigin />
     <link rel='preconnect' href='https://fonts.gstatic.com/' /> <noscript>
         <style>
             .woocommerce-product-gallery {
@@ -4838,7 +5023,8 @@
                     <div class="row no-gutters d-flex align-items-center ">
                         <div class="col-sm-2 col-xs-12 ">
                             <div class="site-branding "><a>
-                                <h2 class="text-light ext-mt-lg">KNOWMEET'22</h2></a>
+                                    <h2 class="text-light ext-mt-lg">KNOWMEET'22</h2>
+                                </a>
                             </div>
                         </div>
                         <div class="col-sm-8 col-xs-12">
@@ -4848,50 +5034,47 @@
                                     <ul id="menu-main" class="menu">
                                         <li id="menu-item-5"
                                             class="mega-menu hide-header menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor menu-item-has-children menu-item-5">
-                                            <a href="#"
-                                                aria-current="page">Home</a>
-                                            
+                                            <a href="#" aria-current="page">Home</a>
+
                                         </li>
                                         <li id="menu-item-506"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-506">
                                             <a href="#">Pages</a>
-                                           
+
                                         </li>
-                                        
+
                                         <li id="menu-item-642"
                                             class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-642">
                                             <a href="#schedule">Schedule</a>
-                                            
+
                                         </li>
                                         <li id="menu-item-376"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-376">
-                                            <a
-                                                href="">Events</a>
+                                            <a href="#event">Events</a>
                                             <ul class="sub-menu">
                                                 <li id="menu-item-841"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841">
-                                                    <a
-                                                        href="">Technical Event</a></li>
+                                                    <a href="">Technical Event</a>
+                                                </li>
                                                 <li id="menu-item-842"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-842">
-                                                    <a
-                                                        href="">Non-Technical Event</a></li>
+                                                    <a href="">Non-Technical Event</a>
+                                                </li>
                                                 <li id="menu-item-840"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840">
-                                                    <a
-                                                        href="">Frolics</a></li>
+                                                    <a href="">Frolics</a>
+                                                </li>
                                                 <li id="menu-item-865"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865">
-                                                    <a
-                                                        href="">Workshops</a></li>
-                                                
+                                                    <a href="">Workshops</a>
+                                                </li>
+
                                             </ul>
                                         </li>
-                                        
+
                                         <li id="menu-item-553"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553">
-                                            <a
-                                                href="#contactus">Contact</a>
+                                            <a href="#contactus">Contact</a>
                                         </li>
                                     </ul>
                                 </nav>
@@ -4900,8 +5083,7 @@
                         <div class="col-lg-2 col-md-2 d-none d-lg-block">
                             <ul class="header-action-items">
                                 <li>
-                                    <a href="https://forms.gle/LomE96qDo6KT6r5N7"
-                                        title="Register" target="_blank"
+                                    <a href="https://forms.gle/LomE96qDo6KT6r5N7" title="Register" target="_blank"
                                         class="btn-fill size-xs color-yellow border-radius-5 gust">Register Now</a>
                                 </li>
                             </ul>
@@ -4911,13 +5093,14 @@
             </div>
         </header>
 
-        
+
 
 
         <div class="rt-header-menu mean-container" id="meanmenu">
             <div class="mean-bar">
                 <a>
-                                <h4 class="text-dark ext-mt-lg">KNOWMEET'22</h4></a>
+                    <h4 class="text-dark ext-mt-lg">KNOWMEET'22</h4>
+                </a>
                 <span class="sidebarBtn ">
                     <span class="fa fa-bars">
                     </span>
@@ -4932,43 +5115,41 @@
                                 class="mega-menu hide-header menu-item menu-item-type-custom menu-item-object-custom current-menu-item current_page_item menu-item-home current-menu-ancestor ">
                                 <a href="#" aria-current="page">Home</a>
                             </li>
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom">
                                 <a href="#">Pages</a>
                             </li>
-                            
-                            <li
-                                class="menu-item menu-item-type-custom menu-item-object-custom ">
+
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom ">
                                 <a href="#">Schedule</a>
-                                
+
                             </li>
                             <li
                                 class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-376">
-                                <a     href="">Events</a>
-                                            <ul class="sub-menu">
-                                                <li id="menu-item-841"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841">
-                                                    <a
-                                                        href="">Technical Event</a></li>
-                                                <li id="menu-item-842"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-842">
-                                                    <a
-                                                        href="">Non-Technical Event</a></li>
-                                                <li id="menu-item-840"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840">
-                                                    <a
-                                                        href="">Frolics</a></li>
-                                                <li id="menu-item-865"
-                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865">
-                                                    <a
-                                                        href=""">Workshops</a></li>
+                                <a href="">Events</a>
+                                <ul class="sub-menu">
+                                    <li id="menu-item-841"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841">
+                                        <a href="">Technical Event</a>
+                                    </li>
+                                    <li id="menu-item-842"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-842">
+                                        <a href="">Non-Technical Event</a>
+                                    </li>
+                                    <li id="menu-item-840"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-840">
+                                        <a href="">Frolics</a>
+                                    </li>
+                                    <li id="menu-item-865"
+                                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-865">
+                                        <a href=""">Workshops</a></li>
                                                 
                                             </ul>
                             </li>
                             
-                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a
-                                    href="#contactus">Contact</a></li>
-                        </ul>
+                            <li class=" menu-item menu-item-type-post_type menu-item-object-page menu-item-553"><a
+                                                href="#contactus">Contact</a>
+                                    </li>
+                                </ul>
                     </nav>
                 </div>
             </div>
@@ -5039,26 +5220,27 @@
                                                                                 <p style="top:235px;left:58px;text-align:left;font-size:80px;color:#ffffff;font-family:cubanoregular;line-height:80px;"
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="texttransitionin:true;texttypein:chars_rand;texteasingin:easeOutBack;hover:true;hovereasingout:easeInCubic;position:relative;">
-                                                                                     FROLICS<br>
-                                                                                     2022</p>
+                                                                                    FROLICS<br>
+                                                                                    2022</p>
                                                                                 <p style="top:451px;left:0px;text-align:left;font-weight:400;font-size:24px;color:#ffffff;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
                                                                                     data-ls="offsetyin:bottom;durationin:2000;delayin:20;clipin:100% 0 0 0;offsetyout:bottom;clipout:100% 0 0 0;position:relative;">
-                                                                                    27 May 2022 | 
+                                                                                    27 May 2022 |
                                                                                     Salem</p>
                                                                                 <p style="top:455px;left:58px;text-align:left;font-weight:400;font-size:34px;color:#fad03b;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="durationin:2000;delayin:20;texttransitionin:true;texttypein:chars_asc;position:relative;">
-                                                                                    27 May 2022 | 
+                                                                                    27 May 2022 |
                                                                                     Salem</p>
-                                                                                    <a 
-                                                                                    class="ls-l ls-hide-tablet ls-hide-phone"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                <a class="ls-l ls-hide-tablet ls-hide-phone"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:2200;delayin:30;easingin:easeInQuad;offsetyout:bottom;clipout:100% 0 0 0;hover:true;hoverbgcolor:#fbcf3b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:16px;font-weight:700;color:#fad03b;border-radius:5px;border-bottom:2px solid #fad03b;top:528px;left:0px;border-right:2px solid #fad03b;border-top:2px solid #fad03b;border-left:2px solid #fad03b;"
-                                                                                        class="ls-button-layer">Register</span></a><a 
+                                                                                        class="ls-button-layer">Register</span></a><a
                                                                                     class="ls-l ls-hide-desktop"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:3000;delayin:30;transitionout:false;hover:true;hoverbgcolor:#fad03b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:24px;font-weight:700;color:#fff;border-radius:5px;border-bottom:2px solid #fff;top:545px;left:59px;border-right:2px solid #fff;border-top:2px solid #fff;border-left:2px solid #fff;"
                                                                                         class="ls-button-layer">Register</span></a>
@@ -5101,7 +5283,7 @@
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="texttransitionin:true;texttypein:chars_rand;texteasingin:easeOutBack;hover:true;hovereasingout:easeInCubic;position:relative;">
                                                                                     TECHNICAL EVENTS<br>
-                                                                                     2022</p>
+                                                                                    2022</p>
                                                                                 <p style="top:451px;left:0px;text-align:left;font-weight:400;font-size:24px;color:#ffffff;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-tablet ls-hide-phone ls-text-layer"
                                                                                     data-ls="offsetyin:bottom;durationin:2000;delayin:20;clipin:100% 0 0 0;offsetyout:bottom;clipout:100% 0 0 0;position:relative;">
@@ -5109,14 +5291,16 @@
                                                                                 <p style="top:460px;left:58px;font-weight:400;font-size:34px;color:#fad03b;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="durationin:2000;delayin:20;texttransitionin:true;texttypein:chars_asc;position:relative;">
-                                                                                    27 May 2022 | Salem</p><a 
+                                                                                    27 May 2022 | Salem</p><a
                                                                                     class="ls-l ls-hide-tablet ls-hide-phone"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:2200;delayin:30;easingin:easeInQuint;offsetyout:bottom;clipout:100% 0 0 0;hover:true;hoverbgcolor:#fbcf3b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:16px;font-weight:700;color:#fad03b;border-radius:5px;border-bottom:2px solid #fad03b;top:528px;left:0px;border-right:2px solid #fad03b;border-top:2px solid #fad03b;border-left:2px solid #fad03b;"
-                                                                                        class="ls-button-layer">REGISTER</span></a><a 
+                                                                                        class="ls-button-layer">REGISTER</span></a><a
                                                                                     class="ls-l ls-hide-desktop"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:3000;delayin:30;transitionout:false;hover:true;hoverbgcolor:#fad03b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:24px;font-weight:700;color:#fff;border-radius:5px;border-bottom:2px solid #fff;top:537px;left:58px;border-right:2px solid #fff;border-top:2px solid #fff;border-left:2px solid #fff;"
                                                                                         class="ls-button-layer">REGISTER</span></a>
@@ -5166,14 +5350,16 @@
                                                                                 <p style="top:469px;left:58px;text-align:left;font-weight:400;font-size:34px;color:#fad03b;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="durationin:2000;delayin:20;texttransitionin:true;texttypein:chars_asc;position:relative;">
-                                                                                    27 May 2022 | Salem</p><a 
+                                                                                    27 May 2022 | Salem</p><a
                                                                                     class="ls-l ls-hide-tablet ls-hide-phone"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:2200;delayin:30;easingin:easeInQuint;offsetyout:bottom;clipout:100% 0 0 0;hover:true;hoverbgcolor:#fbcf3b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:16px;font-weight:700;color:#fad03b;border-radius:5px;border-bottom:2px solid #fad03b;top:528px;left:0px;border-right:2px solid #fad03b;border-top:2px solid #fad03b;border-left:2px solid #fad03b;"
-                                                                                        class="ls-button-layer">REGISTER</span></a><a 
+                                                                                        class="ls-button-layer">REGISTER</span></a><a
                                                                                     class="ls-l ls-hide-desktop"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:3000;delayin:30;transitionout:false;hover:true;hoverbgcolor:#fad03b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:24px;font-weight:700;color:#fff;border-radius:5px;border-bottom:2px solid #fff;top:530px;left:58px;border-right:2px solid #fff;border-top:2px solid #fff;border-left:2px solid #fff;"
                                                                                         class="ls-button-layer">REGISTER</span></a>
@@ -5223,14 +5409,16 @@
                                                                                 <p style="top:469px;left:58px;text-align:left;font-weight:400;font-size:34px;color:#fad03b;font-family:Roboto;line-height:24px;"
                                                                                     class="ls-l ls-hide-desktop ls-text-layer"
                                                                                     data-ls="durationin:2000;delayin:20;texttransitionin:true;texttypein:chars_asc;position:relative;">
-                                                                                    27 May 2022 | Salem</p><a 
+                                                                                    27 May 2022 | Salem</p><a
                                                                                     class="ls-l ls-hide-tablet ls-hide-phone"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:2200;delayin:30;easingin:easeInQuint;offsetyout:bottom;clipout:100% 0 0 0;hover:true;hoverbgcolor:#fbcf3b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:16px;font-weight:700;color:#fad03b;border-radius:5px;border-bottom:2px solid #fad03b;top:528px;left:0px;border-right:2px solid #fad03b;border-top:2px solid #fad03b;border-left:2px solid #fad03b;"
-                                                                                        class="ls-button-layer">REGISTER</span></a><a 
+                                                                                        class="ls-button-layer">REGISTER</span></a><a
                                                                                     class="ls-l ls-hide-desktop"
-                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7" target="_self"
+                                                                                    href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                    target="_self"
                                                                                     data-ls="offsetxin:left;durationin:3000;delayin:30;transitionout:false;hover:true;hoverbgcolor:#fad03b;hovercolor:#111111;position:relative;"><span
                                                                                         style="text-transform: uppercase;padding-top:16px;padding-right:35px;padding-bottom:16px;padding-left:35px;font-family:Roboto;font-size:24px;font-weight:700;color:#fff;border-radius:5px;border-bottom:2px solid #fff;top:530px;left:58px;border-right:2px solid #fff;border-top:2px solid #fff;border-left:2px solid #fff;"
                                                                                         class="ls-button-layer">REGISTER</span></a>
@@ -5280,7 +5468,8 @@
                                                                     <div class="rt-el-twt-1 rtin-light">
                                                                         <div class="rtin-content">
                                                                             <div class="about-layout1">
-                                                                                <p><h1>KNOWMEET'22</h1>
+                                                                                <p>
+                                                                                <h1>KNOWMEET'22</h1>
                                                                                 </p>
                                                                                 <p>Emply dummy text of the printing and
                                                                                     typesetting industry. Lorem Ipsum
@@ -5299,7 +5488,8 @@
                                                                         </div>
                                                                         <div class="rtin-button"><a
                                                                                 class="btn-fill size-lg border-radius-5 color-yellow gust"
-                                                                                href="https://forms.gle/LomE96qDo6KT6r5N7">REGISTER</a></div>
+                                                                                href="https://forms.gle/LomE96qDo6KT6r5N7">REGISTER</a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -5346,11 +5536,13 @@
                                                                                                         style="background-color: #00b0ff">
                                                                                                         <div
                                                                                                             class="day-number">
-                                                                                                            Tech-Event</div>
+                                                                                                            Tech-Event
+                                                                                                        </div>
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
@@ -5370,7 +5562,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                        
+
 
                                                                                                     </td>
                                                                                                 </tr>
@@ -5379,7 +5571,8 @@
                                                                                                         style="background-color: #8cc63e">
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27st May 2022
+                                                                                                            27st May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
@@ -5406,19 +5599,20 @@
                                                                                                         style="background-color: #4c1864">
                                                                                                         <div
                                                                                                             class="day-number">
-                                                                                                           Tech-Event
+                                                                                                            Tech-Event
                                                                                                         </div>
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">Paper Presentation</a>
+                                                                                                            <a href="#">Paper
+                                                                                                                Presentation</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5431,7 +5625,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                        
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr class="menu-item">
@@ -5450,8 +5644,9 @@
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="">.NET WEB API</a>
+                                                                                                            <a href="">.NET
+                                                                                                                WEB
+                                                                                                                API</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5485,7 +5680,8 @@
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
@@ -5493,8 +5689,9 @@
                                                                                                             class="schedule-title">
                                                                                                             <a
                                                                                                                 href="https://radiustheme.com/demo/wordpress/eventalk/event/digital-workshop-conferencee-2018/">
-                                                                                                                Digital Marketing
-                                                                                                                </a>
+                                                                                                                Digital
+                                                                                                                Marketing
+                                                                                                            </a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5507,7 +5704,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                        
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr class="menu-item">
@@ -5526,8 +5723,8 @@
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">Blind Coding
+                                                                                                            <a href="#">Blind
+                                                                                                                Coding
                                                                                                             </a>
 
                                                                                                         </h3>
@@ -5541,7 +5738,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                       
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr class="menu-item">
@@ -5554,14 +5751,16 @@
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="">Converse & Code</a>
+                                                                                                            <a href="">Converse
+                                                                                                                &
+                                                                                                                Code</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5574,7 +5773,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                       
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr class="menu-item">
@@ -5587,14 +5786,15 @@
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">Technical Quiz</a>
+                                                                                                            <a href="#">Technical
+                                                                                                                Quiz</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5607,7 +5807,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                    
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                             </tbody>
@@ -5629,7 +5829,8 @@
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
@@ -5649,7 +5850,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                        
+
 
 
                                                                                                     </td>
@@ -5659,18 +5860,20 @@
                                                                                                         style="background-color: #0f5877">
                                                                                                         <div
                                                                                                             class="day-number">
-                                                                                                            Non-Tech</div>
+                                                                                                            Non-Tech
+                                                                                                        </div>
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">IPL AUCTION</a>
+                                                                                                            <a href="#">IPL
+                                                                                                                AUCTION</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5683,7 +5886,7 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                        
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 <tr class="menu-item">
@@ -5696,14 +5899,15 @@
 
                                                                                                         <div
                                                                                                             class="schedule-date">
-                                                                                                            27th May 2022
+                                                                                                            27th May
+                                                                                                            2022
                                                                                                         </div>
                                                                                                     </th>
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">Logo Desiging</a>
+                                                                                                            <a href="#">Logo
+                                                                                                                Desiging</a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5736,14 +5940,16 @@
                                                                                                     <td>
                                                                                                         <h3
                                                                                                             class="schedule-title">
-                                                                                                            <a
-                                                                                                                href="#">
+                                                                                                            <a href="#">
                                                                                                                 <ul>
-                                                                                                                    <li>Connexion</li>
-                                                                                                                    <li>Connexion</li>
-                                                                                                                    <li>Connexion</li>
+                                                                                                                    <li>Connexion
+                                                                                                                    </li>
+                                                                                                                    <li>Connexion
+                                                                                                                    </li>
+                                                                                                                    <li>Connexion
+                                                                                                                    </li>
                                                                                                                 </ul>
-                                                                                                                </a>
+                                                                                                            </a>
 
                                                                                                         </h3>
                                                                                                     </td>
@@ -5755,21 +5961,23 @@
                                                                                                         </div>
                                                                                                     </td>
                                                                                                     <td>
-                                                                                                       
+
                                                                                                     </td>
                                                                                                 </tr>
                                                                                             </tbody>
                                                                                         </table>
                                                                                     </div>
                                                                                 </div>
-                                                                                
-                                                                                
+
+
                                                                             </div>
                                                                             <div class="row event-social-wrp">
 
                                                                                 <div class="col-xl-12 text-center">
-                                                                                    <a href="https://forms.gle/LomE96qDo6KT6r5N7" title="Buy Now Ticket"
-                                                                                        class="loadmore-four-item btn-fill border-radius-5 size-lg color-yellow">Register Now</a>
+                                                                                    <a href="https://forms.gle/LomE96qDo6KT6r5N7"
+                                                                                        title="Buy Now Ticket"
+                                                                                        class="loadmore-four-item btn-fill border-radius-5 size-lg color-yellow">Register
+                                                                                        Now</a>
                                                                                 </div>
 
                                                                             </div>
@@ -5781,8 +5989,8 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                           
-                                            
+
+
                                             <div class="elementor-section elementor-top-section elementor-element elementor-element-14e5960f elementor-section-stretched bg-primary elementor-section-boxed elementor-section-height-default elementor-section-height-default"
                                                 data-id="14e5960f" data-element_type="section"
                                                 data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5797,120 +6005,118 @@
                                                                 <div class="elementor-widget-container">
                                                                     <div
                                                                         class="rt-el-title section-heading title-black color-light text-center style1">
-                                                                        <h2 class="rtin-title">Workshops</h2>
+                                                                        <h2 class="rtin-title" id="event">Events</h2>
                                                                     </div>
+                                                                    <section class="hero-section">
+                                                                <div class="card-grid">
+                                                                    <a class="card">
+                                                                        <div class="card__background"
+                                                                            style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
+                                                                        </div>
+                                                                        <div class="card__content">
+                                                                            
+                                                                            <h1 class="card__heading"> Technical Events</h1>
+                                                                            <ul>
+                                                                                <li class="list">Paper Presetation
+                                                                                    <ul class="change">
+                                                                                        <li>Blue Eye Technology</li>
+                                                                                        <li>Green Computing</li>
+                                                                                        <li>Smart Dust</li>
+                                                                                        <li>Fintech</li>
+                                                                                        <li>Voice Assistance</li></ul>
+                                                                                        </li>
+                                                                                        <li>Blind Coding</li>
+                                                                                        <li>Converse & Code</li>
+                                                                                        <li>Technical Hunt </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </a>
+                                                                    <a class="card" >
+                                                                        <div class="card__background"
+                                                                            style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                                                        </div>
+                                                                        <div class="card__content">
+                                                                            
+                                                                            <h3 class="card__heading">Non Technical Events</h3>
+                                                                            <ul>
+                                                                                <li> Techno Hunt</li>
+                                                                                <li>IPL Auction</li>
+                                                                                <li>Logo Designing</li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </a>
+                                                                    <a class="card">
+                                                                        <div class="card__background"
+                                                                            style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                                                        </div>
+                                                                        <div class="card__content">
+                                                                            <h3 class="card__heading">Workshops</h3>
+                                                                            <ul>
+                                                                                <li>.NET Web Api</li>
+                                                                                <li>Digital Marketing</li>
+                                                                                </ul>
+                                                                        </div>
+                                                                    </a>
+                                                                        <a class="card" >
+                                                                            <div class="card__background"
+                                                                                style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
+                                                                            </div>
+                                                                            <div class="card__content">
+                                                                                <h3 class="card__heading">Frolics</h3>
+                                                                                <ul>
+                                                                                    <li>Connexion</li>
+                                                                                    <li>Riddles Puzzel</li>
+                                                                                    <li>Guess the path  </li></ul>
+                                                                            </div>
+                                                                        </a>
+                                                                        <div>
+                                                            </section>
                                                                 </div>
                                                             </div>
-                                                            <div class="elementor-element elementor-element-95a6db2 elementor-widget elementor-widget-rt-speaker-grid"
-                                                                data-id="95a6db2" data-element_type="widget"
-                                                                data-widget_type="rt-speaker-grid.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="rt-el-team-slider grid row ext-justify-center">
-                                                                        
-                                                                        <div
-                                                                            class="rtin-item col-lg-3 col-md-4 col-sm-6 col-12 ">
-                                                                            <div class="speaker-layout1 text-center">
-                                                                                <div class="item-img">
-                                                                                    <img width="400" height="400"
-                                                                                        src="https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/7-400x400.jpg"
-                                                                                        class="attachment-eventalk-size4 size-eventalk-size4 wp-post-image"
-                                                                                        alt="" loading="lazy"
-                                                                                        srcset="https://bit.ly/37VWIec 400w, https://bit.ly/37VWIec 300w, https://bit.ly/37VWIec 100w, https://bit.ly/37VWIec 150w"
-                                                                                        sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                    <div class="item-social">
-                                                                                        <ul>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-facebook"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-twitter"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-linkedin"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-youtube-play"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="item-title">
-                                                                                    <h3
-                                                                                        class="title-medium color-light size-md hover-yellow">
-                                                                                        <a
-                                                                                            href="https://radiustheme.com/demo/wordpress/eventalk/speakers/james-morgan-2/">Virtusa Team</a>
-                                                                                    </h3>
-                                                                                    <div
-                                                                                        class="text-center title-light size-md color-light">
-                                                                                        .NET WEB API</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div
-                                                                            class="rtin-item col-lg-3 col-md-4 col-sm-6 col-12">
-                                                                            <div class="speaker-layout1 text-center">
-                                                                                <div class="item-img">
-                                                                                    <img width="400" height="400"
-                                                                                        src="https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk-400x400.jpg"
-                                                                                        class="attachment-eventalk-size4 size-eventalk-size4 wp-post-image"
-                                                                                        alt="" loading="lazy"
-                                                                                        srcset="https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk-400x400.jpg 400w, https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk-300x300.jpg 300w, https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk-100x100.jpg 100w, https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk-150x150.jpg 150w, https://radiustheme.com/demo/wordpress/eventalk/wp-content/uploads/2018/06/sk.jpg 500w"
-                                                                                        sizes="(max-width: 400px) 100vw, 400px" />
-                                                                                    <div class="item-social">
-                                                                                        <ul>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-facebook"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-twitter"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-linkedin"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                            <li><a target="_blank"
-                                                                                                    href="#"><i
-                                                                                                        class="fa fa-youtube-play"
-                                                                                                        aria-hidden="true"></i></a>
-                                                                                            </li>
-                                                                                        </ul>
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="item-title">
-                                                                                    <h3
-                                                                                        class="title-medium color-light size-md hover-yellow">
-                                                                                        <a
-                                                                                            href="https://radiustheme.com/demo/wordpress/eventalk/speakers/steve-john-2/">Steve
-                                                                                            John</a>
-                                                                                    </h3>
-                                                                                    <div
-                                                                                        class="text-center title-light size-md color-light">
-                                                                                        DIGITAL MARKETING</div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+
+
+                                                            <link
+                                                                href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+                                                                rel="stylesheet">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+                                            <div class="w3-panel w3-pale-green "
+                                            style="background-color:rgb(0, 208, 130);"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample"
+                                            aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Paper Presentation
+                                            </div>
+                                            <div class="collapse mt-3" id="collapseExample">
+                                               <ul>
+                                                <li>Blue Eye Technology</li>
+                                                <li>Green Computing</li>
+                                                <li>Smart Dust</li>
+                                                <li>Fintech</li>
+                                                <li>Voice Assistance</li>
+                                                </ul>
+                                            </div>
+                                            <div class="w3-panel w3-pale-green"
+                                            style="background-color:rgb(0, 208, 130);"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample"
+                                            aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Paper Presentation
+                                            </div>
+                                            <div class="collapse mt-3" id="collapseExample">
+                                               <ul>
+                                                <li>Blue Eye Technology</li>
+                                                <li>Green Computing</li>
+                                                <li>Smart Dust</li>
+                                                <li>Fintech</li>
+                                                <li>Voice Assistance</li>
+                                                </ul>
+                                            </div>
+
                                             <div class="elementor-section elementor-top-section elementor-element elementor-element-24432544 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default"
                                                 data-id="24432544" data-element_type="section"
                                                 data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;,&quot;background_background&quot;:&quot;classic&quot;}">
@@ -5921,7 +6127,7 @@
                                                             <div class="elementor-element elementor-element-7e8ad2e elementor-widget elementor-widget-text-editor"
                                                                 data-id="7e8ad2e" data-element_type="widget"
                                                                 data-widget_type="text-editor.default">
-                                                                <h1 >Maps</h1>
+                                                                <h1>Maps</h1>
                                                                 <div class="elementor-widget-container">
                                                                     <iframe loading="lazy" style="border: 0;"
                                                                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3908.9690808992477!2d78.01683761425177!3d11.55407424751844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babe40754d8480f%3A0x4bf024dfe3e621ec!2sKnowledge%20Institute%20of%20Technology%20(KIOT)!5e0!3m2!1sen!2sin!4v1651406679441!5m2!1sen!2sin"
@@ -5932,7 +6138,7 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            
+
                                         </div>
                                     </div>
                                 </article>
@@ -5947,20 +6153,20 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12 col-lg-5">
-<div class="row">
-<div >
-<h2 class="footer-heading"><a href="#" class="logo" id="contactus">Contact Us</a></h2>
-<h5>Mr.Ravi - 9965328130</h5>
-<h5> Mr.Keerthivasan R - 80123 53609</h5>
+                            <div class="row">
+                                <div>
+                                    <h2 class="footer-heading"><a href="#" class="logo" id="contactus">Contact Us</a>
+                                    </h2>
+                                    <h5>Mr.Ravi - 9965328130</h5>
+                                    <h5> Mr.Keerthivasan R - 80123 53609</h5>
 
-</div>
-</div>
-</div>
+                                </div>
+                            </div>
+                        </div>
                         <div class="col-12 mb-md-0 ">
 
-                            <p>&copy; Copyright <a class="text-light"> Knowmeet'22</a> 2022. All Right Reserved. Designed and Developed by <a
-                                    rel="nofollow" target="_blank"
-                                    href="">Rocky</a></p>
+                            <p>&copy; Copyright <a class="text-light"> Knowmeet'22</a> 2022. All Right Reserved.
+                                Designed and Developed by <a rel="nofollow" target="_blank" href="">Rocky</a></p>
 
                             <div class="footer-social">
                                 <ul>
@@ -5982,10 +6188,10 @@
 
     </div>
     <a href="#" class="scrollToTop"><i class="fa fa-angle-double-up"></i></a>
-    
+
 
     <script>
-        
+
         (function () {
             function maybePrefixUrlField() {
                 if (this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
@@ -6011,7 +6217,7 @@
             </div>
         </div>
     </div>
- 
+
 
     <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="pswp__bg"></div>
@@ -6053,7 +6259,7 @@
 	<div class="woocommerce-variation-availability">{{{ data.variation.availability_html }}}</div>
 </script>
     <script type="text/template" id="tmpl-unavailable-variation-template">
-        
+
 	<p>Sorry, this product is unavailable. Please choose a different combination.</p>
 </script>
     <link rel='stylesheet' id='owl-carousel-css'

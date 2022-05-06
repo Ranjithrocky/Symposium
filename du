@@ -3457,7 +3457,7 @@
 
         .card__heading {
             color: var(--text-lighter);
-            font-size: 1.9rem;
+            font-size: 2.0rem;
             text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.2);
             line-height: 1.4;
             word-spacing: 100vw;
@@ -3720,6 +3720,10 @@
             -moz-osx-font-smoothing: grayscale !important;
         }
     </style>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link rel='stylesheet' id='bootstrap-css'
         href='https://radiustheme.com/demo/wordpress/eventalk/wp-content/themes/eventalk/assets/css/bootstrap.min.css'
         type='text/css' media='all' />
@@ -4708,21 +4712,16 @@
             background-color: #4c1864;
         }
 
-        .speaker-layout3:before {
-            background: rgba(76, 24, 100, 0.8);
-        }
-
-        .speaker-layout3 .item-social ul li a {
-            color: #fad03b;
-        }
-
-        .speaker-layout1 .item-img:before {
-            background: rgba(250, 208, 59, 0.9);
-        }
-
-        .speaker-layout2 .item-social ul li a:hover {
-            color: #fad03b;
-        }
+        .change {
+	  display: none;
+	}		
+	.list:hover  .change {
+	  display: block;
+	  color: blue;
+	  font-size: 20px;
+    }
+    
+  
 
         .title-light.hover-yellow a:hover,
         .title-regular.hover-yellow a:hover,
@@ -4913,41 +4912,7 @@
             background-color: #fad03b;
         }
 
-        .skew {
-            background: rgba(76, 24, 100, 0.7);
-        }
-
-        .skew_2 {
-            background: rgba(76, 24, 100, 0.6);
-        }
-
-        .skew_3 {
-            background: rgba(76, 24, 100, 0.5);
-        }
-
-        .price-table-layout3 .tpt-col-inner:hover {
-            background: #4c1864;
-        }
-
-        .price-table-layout2:after {
-            background: #fad03b;
-        }
-
-        .price-table-layout2 .tpt-header .tpt-header-top .tpt-title:before {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout2 .tpt-header .tpt-header-top .tpt-title:after {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout3 .tpt-footer .tpt-footer-btn {
-            background-color: #fad03b;
-        }
-
-        .price-table-layout3 .tpt-col-inner:hover .tpt-header .tpt-header-top {
-            border-bottom: 1px solid #fad03b;
-        }
+        
     </style>
     <link rel="preload" as="style"
         href="https://fonts.googleapis.com/css?family=Poppins:600,500,700%7CRoboto:400&#038;display=swap&#038;ver=1624437890" />
@@ -5085,7 +5050,7 @@
                                         </li>
                                         <li id="menu-item-376"
                                             class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-376">
-                                            <a href="">Events</a>
+                                            <a href="#event">Events</a>
                                             <ul class="sub-menu">
                                                 <li id="menu-item-841"
                                                     class="menu-item menu-item-type-post_type menu-item-object-page menu-item-841">
@@ -6040,50 +6005,68 @@
                                                                 <div class="elementor-widget-container">
                                                                     <div
                                                                         class="rt-el-title section-heading title-black color-light text-center style1">
-                                                                        <h2 class="rtin-title" id="events">Events</h2>
+                                                                        <h2 class="rtin-title" id="event">Events</h2>
                                                                     </div>
                                                                     <section class="hero-section">
                                                                 <div class="card-grid">
-                                                                    <a class="card" href="#">
+                                                                    <a class="card">
                                                                         <div class="card__background"
                                                                             style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)">
                                                                         </div>
                                                                         <div class="card__content">
                                                                             
-                                                                            <h3 class="card__heading">Technical</h3>
+                                                                            <h1 class="card__heading"> Technical Events</h1>
                                                                             <ul>
-                                                                                <li>Paper</li>
+                                                                                <li class="list">Paper Presetation
+                                                                                    <ul class="change">
+                                                                                        <li>Blue Eye Technology</li>
+                                                                                        <li>Green Computing</li>
+                                                                                        <li>Smart Dust</li>
+                                                                                        <li>Fintech</li>
+                                                                                        <li>Voice Assistance</li></ul>
+                                                                                        </li>
+                                                                                        <li>Blind Coding</li>
+                                                                                        <li>Converse & Code</li>
+                                                                                        <li>Technical Hunt </li>
                                                                             </ul>
                                                                         </div>
                                                                     </a>
-                                                                    <a class="card" href="#">
+                                                                    <a class="card" >
                                                                         <div class="card__background"
                                                                             style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                                                                         </div>
                                                                         <div class="card__content">
                                                                             
-                                                                            <h3 class="card__heading">Example Card
-                                                                                Heading</h3>
+                                                                            <h3 class="card__heading">Non Technical Events</h3>
+                                                                            <ul>
+                                                                                <li> Techno Hunt</li>
+                                                                                <li>IPL Auction</li>
+                                                                                <li>Logo Designing</li>
+                                                                            </ul>
                                                                         </div>
                                                                     </a>
-                                                                    <a class="card" href="#">
+                                                                    <a class="card">
                                                                         <div class="card__background"
                                                                             style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                                                                         </div>
                                                                         <div class="card__content">
-                                                                            <p class="card__category">Category</p>
-                                                                            <h3 class="card__heading">Example Card
-                                                                                Heading</h3>
+                                                                            <h3 class="card__heading">Workshops</h3>
+                                                                            <ul>
+                                                                                <li>.NET Web Api</li>
+                                                                                <li>Digital Marketing</li>
+                                                                                </ul>
                                                                         </div>
-                                                                        </li>
-                                                                        <a class="card" href="#">
+                                                                    </a>
+                                                                        <a class="card" >
                                                                             <div class="card__background"
                                                                                 style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)">
                                                                             </div>
                                                                             <div class="card__content">
-                                                                                <p class="card__category">Category</p>
-                                                                                <h3 class="card__heading">Example Card
-                                                                                    Heading</h3>
+                                                                                <h3 class="card__heading">Frolics</h3>
+                                                                                <ul>
+                                                                                    <li>Connexion</li>
+                                                                                    <li>Riddles Puzzel</li>
+                                                                                    <li>Guess the path  </li></ul>
                                                                             </div>
                                                                         </a>
                                                                         <div>
@@ -6095,10 +6078,43 @@
                                                             <link
                                                                 href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
                                                                 rel="stylesheet">
-                                                            
                                                         </div>
                                                     </div>
                                                 </div>
+                                            </div>
+                                            <div class="w3-panel w3-pale-green "
+                                            style="background-color:rgb(0, 208, 130);"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample"
+                                            aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Paper Presentation
+                                            </div>
+                                            <div class="collapse mt-3" id="collapseExample">
+                                               <ul>
+                                                <li>Blue Eye Technology</li>
+                                                <li>Green Computing</li>
+                                                <li>Smart Dust</li>
+                                                <li>Fintech</li>
+                                                <li>Voice Assistance</li>
+                                                </ul>
+                                            </div>
+                                            <div class="w3-panel w3-pale-green"
+                                            style="background-color:rgb(0, 208, 130);"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#collapseExample"
+                                            aria-expanded="false"
+                                            aria-controls="collapseExample">
+                                            Paper Presentation
+                                            </div>
+                                            <div class="collapse mt-3" id="collapseExample">
+                                               <ul>
+                                                <li>Blue Eye Technology</li>
+                                                <li>Green Computing</li>
+                                                <li>Smart Dust</li>
+                                                <li>Fintech</li>
+                                                <li>Voice Assistance</li>
+                                                </ul>
                                             </div>
 
                                             <div class="elementor-section elementor-top-section elementor-element elementor-element-24432544 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default"
